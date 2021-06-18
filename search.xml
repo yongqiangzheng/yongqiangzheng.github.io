@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Stanford CoreNLP在MacOS上的问题</title>
+      <link href="2021/06/18/post/"/>
+      <url>2021/06/18/post/</url>
+      
+        <content type="html"><![CDATA[<p>运行环境：<br>MacOS: 11.4<br>Python: 3.9<br>Stanford CoreNLP: 4.2.2</p><p>问题描述：<br>MacOS在Pycharm使用Stanford CoreNLP会因为没有Root权限而无法运行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;.conda&#x2F;envs&#x2F;NLP&#x2F;lib&#x2F;python3.9&#x2F;site-packages&#x2F;psutil&#x2F;_psosx.py&quot;, line 344, in wrapper</span><br><span class="line">    return fun(self, *args, **kwargs)</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;.conda&#x2F;envs&#x2F;NLP&#x2F;lib&#x2F;python3.9&#x2F;site-packages&#x2F;psutil&#x2F;_psosx.py&quot;, line 534, in connections</span><br><span class="line">    rawlist &#x3D; cext.proc_connections(self.pid, families, types)</span><br><span class="line">PermissionError: [Errno 1] Operation not permitted (originated from proc_pidinfo())</span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;PycharmProjects&#x2F;NLP&#x2F;Stanfordcorenlp.py&quot;, line 11, in &lt;module&gt;</span><br><span class="line">    nlp &#x3D; StanfordCoreNLP(r&#39;&#x2F;Users&#x2F;zyq&#x2F;Downloads&#x2F;stanford-corenlp-4.2.2&#39;)</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;.conda&#x2F;envs&#x2F;NLP&#x2F;lib&#x2F;python3.9&#x2F;site-packages&#x2F;stanfordcorenlp&#x2F;corenlp.py&quot;, line 80, in __init__</span><br><span class="line">    if port_candidate not in [conn.laddr[1] for conn in psutil.net_connections()]:</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;.conda&#x2F;envs&#x2F;NLP&#x2F;lib&#x2F;python3.9&#x2F;site-packages&#x2F;psutil&#x2F;__init__.py&quot;, line 2153, in net_connections</span><br><span class="line">    return _psplatform.net_connections(kind)</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;.conda&#x2F;envs&#x2F;NLP&#x2F;lib&#x2F;python3.9&#x2F;site-packages&#x2F;psutil&#x2F;_psosx.py&quot;, line 249, in net_connections</span><br><span class="line">    cons &#x3D; Process(pid).connections(kind)</span><br><span class="line">  File &quot;&#x2F;Users&#x2F;zyq&#x2F;.conda&#x2F;envs&#x2F;NLP&#x2F;lib&#x2F;python3.9&#x2F;site-packages&#x2F;psutil&#x2F;_psosx.py&quot;, line 351, in wrapper</span><br><span class="line">    raise AccessDenied(self.pid, self._name)</span><br><span class="line">psutil.AccessDenied: psutil.AccessDenied (pid&#x3D;3351)</span><br></pre></td></tr></table></figure><p>解决方法：</p><ul><li>方法1：<br>点击Pycharm底部的Terminal输入：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python name.py</span><br></pre></td></tr></table></figure><ul><li>方法2：<br><a href="http://xn--AltStanfordCoreNLPcorenlp-mt35bjyhy19no7wd5g7j.py">按Alt点击StanfordCoreNLP进入corenlp.py</a></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from stanfordcorenlp import StanfordCoreNLP</span><br></pre></td></tr></table></figure><p>将以下代码注释：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># If port not set, auto select</span><br><span class="line">if self.port is None:</span><br><span class="line">    for port_candidate in range(9000, 65535):</span><br><span class="line">        if port_candidate not in [conn.laddr[1] for conn in psutil.net_connections()]:</span><br><span class="line">            self.port &#x3D; port_candidate</span><br><span class="line">            break</span><br><span class="line"></span><br><span class="line"># Check if the port is in use</span><br><span class="line">if self.port in [conn.laddr[1] for conn in psutil.net_connections()]:</span><br><span class="line">    raise IOError(&#39;Port &#39; + str(self.port) + &#39; is already in use.&#39;)</span><br></pre></td></tr></table></figure><p>在后面添加代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.port &#x3D; 9999</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> NLP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NLPP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="2021/04/27/hello-world/"/>
       <url>2021/04/27/hello-world/</url>
