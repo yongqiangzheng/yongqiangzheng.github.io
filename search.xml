@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Improving aspect-based sentiment analysis with Knowledge-aware Dependency Graph Network</title>
+      <link href="/2023/04/01/KDGN/"/>
+      <url>/2023/04/01/KDGN/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2023 Information Fusion <a href="KDGN.pdf">Paper</a></p></blockquote><hr><h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>图结构没有考虑领域知识</p><h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><img src="KDGN1.png" width="50%" height="50%"/><h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><img src="KDGN2.png" width="50%" height="50%"/>]]></content>
+      
+      
+      <categories>
+          
+          <category> ABSA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GAT </tag>
+            
+            <tag> knowledge database </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CORT: A New Baseline for Comparative Opinion Classification by Dual Prompts</title>
       <link href="/2023/04/01/CORT/"/>
       <url>/2023/04/01/CORT/</url>
@@ -174,7 +201,7 @@
       
         <tags>
             
-            <tag> lexicon </tag>
+            <tag> sentiment lexicon </tag>
             
             <tag> attention </tag>
             
