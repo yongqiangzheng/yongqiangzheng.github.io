@@ -4,6 +4,77 @@
   
     
     <entry>
+      <title>CORT: A New Baseline for Comparative Opinion Classification by Dual Prompts</title>
+      <link href="/2023/04/01/CORT/"/>
+      <url>/2023/04/01/CORT/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2022 EMNLP(findings) <a href="CORT.pdf">Paper</a></p></blockquote><hr><h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>物体比较对顺序非常敏感<br>利用比较的特点设计双通道</p><h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><img src="CORT1.png" width="50%" height="50%"/><h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><img src="CORT2.png" width="50%" height="50%"/>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> prompt learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Learn from structural scope: Improving aspect-level sentiment analysis with hybrid graph convolutional networks</title>
+      <link href="/2023/04/01/HGCN/"/>
+      <url>/2023/04/01/HGCN/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2023 Neurocomputing <a href="HGCN.pdf">Paper</a></p></blockquote><hr><h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ol><li>span-based模型抽取出的和方面相关的短语不完整 （缺乏语法信息）</li><li>成分句法树可以获取结构完整、连续上下文</li></ol><img src="HGCN0.png" width="50%" height="50%"/><h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><img src="HGCN1.png" width="50%" height="50%"/><h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><img src="HGCN2.png" width="50%" height="50%"/>]]></content>
+      
+      
+      <categories>
+          
+          <category> ABSA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> constituency </tag>
+            
+            <tag> GCN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Aspect Feature Distillation and Enhancement Network for Aspect-based Sentiment Analysis</title>
+      <link href="/2023/04/01/AFDEN/"/>
+      <url>/2023/04/01/AFDEN/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2022 SIGIR <a href="AFDEN.pdf">Paper</a></p></blockquote><hr><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><ol><li>注意力机制关注到方面无关的单词会引入噪声</li><li>交叉熵损失很难利用intra-class和inter-class的隐式信息</li></ol><h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><ol><li>消除方面无关单词的干扰 (梯度回传)</li><li>利用相同情感和不同情感之间的信息 (对比学习)</li></ol><img src="AFDEN1.png" width="50%" height="50%"/><h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><img src="AFDEN2.png" width="50%" height="50%"/>]]></content>
+      
+      
+      <categories>
+          
+          <category> ABSA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> contrastive learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Discrete Opinion Tree Induction for Aspect-based Sentiment Analysis</title>
       <link href="/2023/03/25/dotGCN/"/>
       <url>/2023/03/25/dotGCN/</url>
@@ -35,7 +106,7 @@
       <link href="/2023/03/24/C3DA/"/>
       <url>/2023/03/24/C3DA/</url>
       
-        <content type="html"><![CDATA[<h2 id="A-Contrastive-Cross-Channel-Data-Augmentation-Framework-for-Aspect-Based-Sentiment-Analysis"><a href="#A-Contrastive-Cross-Channel-Data-Augmentation-Framework-for-Aspect-Based-Sentiment-Analysis" class="headerlink" title="A Contrastive Cross-Channel Data Augmentation Framework for Aspect-Based Sentiment Analysis"></a>A Contrastive Cross-Channel Data Augmentation Framework for Aspect-Based Sentiment Analysis</h2><blockquote><p>2022 COLING <a href="C3DA.pdf">Paper</a></p></blockquote><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><ol><li>数据增强提高预测多方面句子的鲁棒性</li><li>使用预训练语言模型生成</li></ol><h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p>方面和情感双通道 对比学习</p><img src="C3DA1.png" width="50%" height="50%"/><h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><img src="C3DA2.png" width="50%" height="50%"/>]]></content>
+        <content type="html"><![CDATA[<h2 id="A-Contrastive-Cross-Channel-Data-Augmentation-Framework-for-Aspect-Based-Sentiment-Analysis"><a href="#A-Contrastive-Cross-Channel-Data-Augmentation-Framework-for-Aspect-Based-Sentiment-Analysis" class="headerlink" title="A Contrastive Cross-Channel Data Augmentation Framework for Aspect-Based Sentiment Analysis"></a>A Contrastive Cross-Channel Data Augmentation Framework for Aspect-Based Sentiment Analysis</h2><blockquote><p>2022 COLING <a href="C3DA.pdf">Paper</a></p></blockquote><hr><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><ol><li>数据增强提高预测多方面句子的鲁棒性</li><li>使用预训练语言模型生成</li></ol><h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p>方面和情感双通道 对比学习</p><img src="C3DA1.png" width="50%" height="50%"/><h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><img src="C3DA2.png" width="50%" height="50%"/>]]></content>
       
       
       <categories>
@@ -49,7 +120,7 @@
             
             <tag> contrastive learning </tag>
             
-            <tag> DA </tag>
+            <tag> data augmentation </tag>
             
         </tags>
       
@@ -58,7 +129,7 @@
     
     
     <entry>
-      <title>BiSyn-GAT+ Bi-Syntax Aware Graph Attention Network for Aspect-based Sentiment Analysis</title>
+      <title>BiSyn-GAT+: Bi-Syntax Aware Graph Attention Network for Aspect-based Sentiment Analysis</title>
       <link href="/2023/03/24/BiSyn-GAT/"/>
       <url>/2023/03/24/BiSyn-GAT/</url>
       
@@ -108,19 +179,6 @@
             <tag> attention </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2023/03/18/hello-world/"/>
-      <url>/2023/03/18/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
