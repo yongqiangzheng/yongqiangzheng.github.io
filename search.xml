@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Affective Knowledge Enhanced Multiple-Graph Fusion Networks for Aspect-based Sentiment Analysis</title>
+      <link href="/2023/04/18/MGFN/"/>
+      <url>/2023/04/18/MGFN/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>2022 EMNLP <a href="MGFN.pdf">Paper</a></p></blockquote><hr><h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>生成树没有考虑边的类型标签</p><h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>语法图和生成图融合<br><img src="MGFN1.png" width="50%" height="50%"/></p><h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><img src="MGFN2.png" width="50%" height="50%"/>]]></content>
+      
+      
+      <categories>
+          
+          <category> ABSA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sentiment lexicon </tag>
+            
+            <tag> GCN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Improving aspect-based sentiment analysis with Knowledge-aware Dependency Graph Network</title>
       <link href="/2023/04/01/KDGN/"/>
       <url>/2023/04/01/KDGN/</url>
